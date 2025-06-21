@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffd4;
+    font-family: 'Roboto', sans-serif;
+    hyphens: auto;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.source {
+    text-align: right;
+    font-style: italic;
+}
+
+.link {
+    text-decoration: none;
+    color: #ff7f2a;
+    transition: 0.3s ease;
+}
+
+.link:hover {
+    color: #bf153f;
+}
+
+div.content {
+    background-color: #ffffff;
+    color: #555;
+    width: 70%;
+    border: 2px;
+    border-color: brown;
+    border-style: solid;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #ff7f2a;
+    overflow: hidden;
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
+    width: 33.33%;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 0;
+    text-align: center;
+    float: left;
+    overflow: auto;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+li a:hover {
+    background-color: #bf153f;
+}
+
+#header-image {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.cikk {
+    padding: 20px;
+    margin: 20px;
+}
+
+.cikk-image {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 10px 10px 0 0;
+    float: left;
+    animation-name: zoomIn;
+    animation-duration: 1s;
+}
+
+h2, h3 {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+h3 {
+    text-align: center;
+    color: #555;
+}
+
+.map {
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
