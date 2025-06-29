@@ -1,0 +1,174 @@
+* {
+    margin: 30px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    hyphens: auto;
+    text-align: justify;
+    background-image: url("https://wallpapersok.com/images/hd/the-hunger-games-mockingjay-pin-wjcwjkyd2jj3l0yj.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(129, 102, 68);
+}
+
+nav {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(53, 39, 21);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(227, 198, 162);
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: black;
+    background-color: rgb(129, 102, 68);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 2s;
+}
+
+.spoiler {
+    background: black;
+    color: black;
+}
+
+.spoiler:hover {
+    background: rgba(227, 198, 162, 0.8);
+    color: black;
+    transition: 2s;
+}
+
+h1 {
+    animation-name: backInLeft;
+    text-align: center;
+    animation-duration: 1s;
+    color: rgb(227, 198, 162);
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes backInLeft {
+    0% {
+        opacity: .7;
+        -webkit-transform: translateX(-2000px) scale(.7);
+        transform: translateX(-2000px) scale(.7)
+    }
+
+    80% {
+        opacity: .7;
+        -webkit-transform: translateX(0) scale(.7);
+        transform: translateX(0) scale(.7)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 2em;
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+}
+
+
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+div {
+    padding: 20px;
+    background-color: rgba(227, 198, 162, 0.8);
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+@media only screen and (max-width:1000px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    div.hidden-desktop {
+        display: block;
+    }
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(227, 198, 162);  
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+div.fixed-element {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 2px solid black;
+    background-color: rgb(129, 102, 68);
+}
