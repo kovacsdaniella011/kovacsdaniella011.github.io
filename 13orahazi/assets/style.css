@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #D7B520;
+    hyphens: auto;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#content {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside section"
+        "footer footer";
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+    padding: 20px 30px 40px 20px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    animation: flipInX 1s ease-in-out;
+}
+
+header {
+    grid-area: header;
+    background-color: #e7e6e6;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    max-height: 440px;
+    border-radius: 10px;
+    animation: flipInY 1s ease-in-out;
+}
+
+aside {
+    grid-area: aside;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #5b9bd4;
+}
+
+section {
+    grid-area: section;
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    gap: 20px;
+}
+
+.szekcio {
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.szekcio img {
+    float: left;
+    width: 150px;
+    margin-right: 15px;
+    border-radius: 10px;
+    animation: flipInY 1s ease-in-out;
+}
+
+.szekcio-1 {
+    background-color: #fae4d5;
+}
+
+.szekcio-2 {
+    background-color: #fff1cc;
+}
+
+.szekcio-3 {
+    background-color: #d4f0fa;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #e7e6e6;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav a:hover {
+    color: black;
+    background-color: #0c4d86;
+    text-decoration: none;
+    transition: 1s;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    text-align: center;
+}
+
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg)
+    }
+
+    40% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-transform: perspective(400px) rotateY(-20deg);
+        transform: perspective(400px) rotateY(-20deg)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg)
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotateY(-5deg);
+        transform: perspective(400px) rotateY(-5deg)
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px)
+    }
+}
+
+@keyframes flipInY {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: perspective(400px) rotateY(90deg);
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: perspective(400px) rotateY(-20deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: perspective(400px) rotateY(10deg);
+    }
+
+    80% {
+        transform: perspective(400px) rotateY(-5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        transform: perspective(400px) rotateX(90deg)
+    }
+
+    40% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-transform: perspective(400px) rotateX(-20deg);
+        transform: perspective(400px) rotateX(-20deg)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateX(10deg);
+        transform: perspective(400px) rotateX(10deg)
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotateX(-5deg);
+        transform: perspective(400px) rotateX(-5deg)
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px)
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: perspective(400px) rotateX(90deg)
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: perspective(400px) rotateX(-20deg)
+    }
+
+    60% {
+        opacity: 1;
+        transform: perspective(400px) rotateX(10deg)
+    }
+
+    80% {
+        transform: perspective(400px) rotateX(-5deg)
+    }
+
+    to {
+        transform: perspective(400px)
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        grid-template-areas:
+            "header"
+            "aside"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        grid-template-rows: auto;
+    }
+
+    .szekcio img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 5px;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px 12px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        text-align: center;
+    }
+}

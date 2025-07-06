@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strandolás a tavaknál</title>
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+    <div id="content">
+
+        <header>
+            <img src="assets/headerbg.png" alt="Strand" />
+        </header>
+
+        <aside>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#balaton">Balaton</a></li>
+                    <li><a href="#tisza">Tisza-tó</a></li>
+                    <li><a href="#szelidi">Szelidi-tó</a></li>
+                </ul>
+            </nav>
+
+            <form>
+                <legend>Kérem töltse ki a jelentkezési űrlapot!</legend>
+
+                <label for="nev">Név:</label>
+                <input type="text" id="nev" name="nev" required maxlength="50" />
+
+                <label for="email">E-mail cím:</label>
+                <input type="email" id="email" name="email" required maxlength="100" />
+
+                <label for="tel">Telefonszám:</label>
+                <input type="tel" id="tel" name="tel" required maxlength="20" />
+
+                <label for="to">Melyik tó érdekli?</label>
+                <select id="to" name="to">
+                    <option value="" disabled selected>Válasszon egy tavat!</option>
+                    <option>Balaton</option>
+                    <option>Tisza-tó</option>
+                    <option>Szelidi-tó</option>
+                </select>
+
+                <fieldset>
+                    <legend>Milyen szállást keres?</legend>
+                    <label><input type="checkbox" name="szallas" value="szalloda" /> Szálloda</label>
+                    <label><input type="checkbox" name="szallas" value="apartman" /> Apartmanház</label>
+                    <label><input type="checkbox" name="szallas" value="kemping" /> Kemping</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Milyen ellátás legyen?</legend>
+                    <label><input type="radio" name="ellatas" value="teljes" required /> Teljes panzió</label>
+                    <label><input type="radio" name="ellatas" value="fel" /> Félpanzió</label>
+                    <label><input type="radio" name="ellatas" value="reggeli" /> Csak reggeli</label>
+                    <label><input type="radio" name="ellatas" value="semmi" /> Nem kérek ellátást</label>
+                </fieldset>
+
+                <label for="uzenet">Egyéb üzenet:</label>
+                <textarea id="uzenet" name="uzenet" rows="4"></textarea>
+
+                <button type="submit">Mehet!</button>
+            </form>
+        </aside>
+
+        <section>
+            <article id="balaton" class="szekcio szekcio-1">
+                <h2>Balaton</h2>
+                <img src="assets/balaton.png" alt="Balaton" />
+                
+                <p>
+                    A balatoni strandminősítő megmérettetésre az idén 45 strand üzemeltetője jelentkezett, és 28 strand
+                    nyerte el a legjobbaknak
+                    járó, ötcsillagos Kék Hullám Zászlót. A pontozás során vizsgálták egyebek közt a parkolási viszonyokat, a vizesblokkok állapotát, az
+                    akadálymentesítést, a virágosítást, a gyep és a meder állapotát, a játszótereket, a sportolási
+                    lehetőségeket és a gyerekbarát szolgáltatásokat.
+                </p>
+                <p>
+                    Az idén újra meghirdették a Balaton Családbarát Strandja és a Balaton Legzöldebb Strandja
+                    különdíjakat. Az előbbit Alsóörs községi strandja, az utóbbit a gyenesdiási Diási Játék Strand
+                    nyerte el. Idén új elismeréseket is kiosztottak. A Balatoni Kör meghirdette a Balaton
+                    Gasztro-Strandja díjat, amit Balatongyörök községi strandja nyert el, ahol példamutatóan, egész
+                    évben üzemelnek minőségi kínálattal rendelkező vendéglátóhelyek.
+                </p>
+            </article>
+
+            <article id="tisza" class="szekcio szekcio-2">
+                <h2>Tisza-tó</h2>
+                <img src="assets/tiszato.png" alt="Tisza-tó" />
+                <p>
+                    A Tisza-tavi strandok egyik legnépszerűbbje Tiszafüreden van, ami egyébként az egyik legrégebbi:
+                    1902 óta fürdőhely. A homokos plázs mindenkit vonz, ahogy a vizi játszótér, gasztrosarok, játszótér
+                    is. A tiszafüredi strand a sportolási és kikapcsolódási lehetőségeknek köszönhetően több napon át
+                    kínál programokat. A moduláris stégrendszeren napozhatunk, de ha már kipihentük magunkat, akkor
+                    különféle sportolásra is van lehetőség, mint röplabda, foci, vízibicikli, kajak, kenu, SUP, van
+                    fitneszpark és multisportpálya. A bejáratánál található a Tourintorm iroda, ahol parkoló és
+                    kerekpáros szervizoszlop is található.
+                </p>
+                <p>
+                    Ha csúszdázni szeretnél, akkor mindenképp Abádszalókra vedd az irányt! Három darab óriáscsúszda
+                    várja a bátrabbakat, de aki vissza akar venni a tempóból, annak mini-golf pálya is elérhető, több
+                    nehézségi szinttel. Homokfocizni is lehet, és strandröplabdázni is van lehetőség a strandon. Ha
+                    megszomjazunk, akkor pedig a koktélbár segíthet a felfrissülésben. Vizuális csemegének számít a
+                    strand LED Zoo-ja amely a Tisza-tó állatait formázza meg.
+                </p>
+                <p>
+                    A 22 éves, ámde modern, igényes strand szintén számos kikapcsolódási lehetőséggel várja a fürdőzni
+                    vágyókat. A Tisza-tavi strandok egyik leginkább családbarát helye ez, aminek a homokos partja a
+                    gátkorona tövében található, a partja lassan mélyül, így nem kell attól tartani, hogy néhány lépés
+                    után állig elmerülünk. A tavalyi évhez képest újítás egy új stégrendszer, ahol napozó sziget várja a
+                    pihenni vágyókat.
+                </p>
+            </article>
+
+            <article id="szelidi" class="szekcio szekcio-3">
+                <h2>Szelidi-tó</h2>
+                <img src="assets/szelidito.png" alt="Szelidi-tó" />
+                <p>
+                    A Szelidi tó különleges vízösszetétele és élővilága miatt már korán felfigyeltek rá a kutatók is.
+                    Először Dr. Tímár Kálmán foglalkozott a tó eredetével és történetével, majd tudományos szempontból
+                    Dr. Donászy Ernő vizsgálta meg. Ő foglalta össze a tó mikroszkopikus élővilágát több mint 400
+                    oldalas német nyelvű könyvében, 1959-ben. Az erősen sós, illetve sajátos sóösszetételű vízben egyedi
+                    mikroszkopikus növény- és állatvilág alakult ki. A tó vize jellemzően magas jódtartalmú víz, ez adja
+                    gyógyhatását, mert felszívódik a bőrön keresztül. Az ide látogatók első észrevétele, hogy ez a
+                    szikes víz bársonyos tapintású. Ezt a tulajdonságát mind a mai napig megőrizte a tó.
+                </p>
+                <p>
+                    Annak ellenére, hogy a természetes és mesterséges folyamatok hatására lassú átalakulásban van a tó
+                    vize, még mindig tapasztalható a gyógyhatás. A Szelidi- tó és szűkebb környezete 1976 óta mint
+                    természetvédelmi terület védelem alatt áll, a Kiskunsági Nemzeti Park része. A Szelidi-tó
+                    Természetvédelmi Terület kiterjedése 320 hektár.
+                </p>
+                <p>
+                    Az öt kilométer hosszú Szelidi-tó déli partján ingyenes és fizetős strand is van, ahol homokos
+                    stranddal, kempingekkel, játszóterekkel, vízi csúszdákkal várják a látogatókat, a fizetős részen
+                    vízibiciklit, csónakot, kenut is lehet bérelni.
+                </p>
+                <p>
+                    A Szelidi-tó a jégkorszak után a Duna mellékágából lefűződött morotvató. Ez az egyetlen mély vizű,
+                    szikes jellegű tó hazánkban. Vize nátrium- kálium- és magnézium-sókat tartalmaz. A tó fürdésre is
+                    kiválóan alkalmas, ezért már régóta kedvelt fürdő és üdülőhely. A déli parton 800 méter hosszúságú
+                    strand működik.
+                </p>
+                <p>
+                    A tó vize ugyan nem minősített gyógyvíz, de már a középkorban is használták gyógyításra, ma
+                    idegrendszeri, hormonális és reumatikus bántalmak kezelésére ajánlják. A Szelidi-tókörnyékének
+                    természeti értékeit a szikes puszták, láp- és mocsárrétek adják. Vize a szikes tavakéra jellemző,
+                    annak ellenére, hogy ősi Duna mellékágból fűződött le. A 12 állomásból álló tanösvény bemutatja a tó
+                    keletkezését, vízének jellegzetességeit és a benne élő élőlényeket, valamint a környező területek
+                    élővilágát.
+                </p>
+            </article>
+        </section>
+
+        <footer>
+            <p>&copy; Kovács Daniella, 2025</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
