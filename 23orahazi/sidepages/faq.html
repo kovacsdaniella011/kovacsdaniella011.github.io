@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gyakran ismételt kérdések</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+    <meta name="description" content="A nagyonbaba workshop csakis a legbabább termékeket tartalmazza.">
+    <meta name="keywords" content="webshop, design, workshop, termékek, nagyonbaba">
+    <meta name="author" content="Team Recoil">
+    <meta name="robots" content="noindex, nofollow">
+
+</head>
+
+<body>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">gyors elérés!</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="../index.html">főoldal</a>
+            <a href="workshop.html">workshop</a>
+            <a href="faq.html">gyik</a>
+            <a href="hirlevel.html">hírlevél</a>
+        </div>
+    </div>
+    <h1>gyakran ismételt kérdések</h1>
+    <p class="lead">itt megtalálod a leggyakrabban feltett kérdéseket és válaszokat! (az információk folyamatosan
+        frissülnek)</p>
+    <main class="faq-container">
+        <section class="faq-item">
+            <h2>Mennyi idő alatt fog megérkezni a rendelésem?</h2>
+            <p>jelenleg úgy kalkuláljuk, hogy kb 2-5 munkanap alatt ki fogjuk tudni szállítani, futárszolgálattal.</p>
+        </section>
+
+        <section class="faq-item">
+            <h2>milyen fizetési módok közül választhatok majd?</h2>
+            <p>bankkártyás fizetés, előre utalás és utánvét is elérhető lesz! utóbbi talán később, de rajta leszünk.</p>
+        </section>
+
+        <section class="faq-item">
+            <h2>lesz lehetőség visszaküldésre?</h2>
+            <p>természetesen! a póló és a telefontok méreteknél mi is sokszor tapasztaltuk már, hogy mégsem passzolnak.
+                a terméket 14 napon belül vissza tudod majd küldeni, ha nem vagy elégedett.
+                Részletek az ÁSZF-ben találhatók.</p>
+        </section>
+
+        <section class="faq-item">
+            <h2>külföldre is fogtok tudni szállítani?</h2>
+            <p>jelenleg csak hazai piacra tervezünk, de eltökéltek vagyunk a nemzetközi kiterjedésre is.</p>
+        </section>
+    </main>
+    <section class="contact">
+        <h2>kapcsolat</h2>
+        <p class="lead">kérdések és észrevételek: <a href="mailto:info@nagyonbaba.hu">info@nagyonbaba.hu</a></p>
+        <form id="contact-form" action="mailto:info@nagyonbaba.hu" method="post" enctype="text/plain">
+            <label for="name">név:</label>
+            <div class="inputbox">
+            <input type="text" id="name" name="name" required>
+        </div>
+        <label for="email">email:</label>
+        <div class="inputbox">
+            <input type="email" id="email" name="email" required>
+        </div>
+        <label for="message">üzenet:</label>
+        <div class="inputbox">
+            <textarea id="message" name="message" rows="10" cols="100" maxlength="1000" required></textarea>
+        </div>
+        <input type="submit" value="küldés">
+
+    </form>
+    </section>
+    <footer>
+        <p>Vizsgamunka - HTML, CSS, JS (2025 augusztus)</p>
+        <p>Weboldal készítője: Kovács Daniella</p>
+    </footer>
+    <script src="../assets/main.js"></script>
+</body>
+
+</html>
