@@ -2,39 +2,72 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <meta name="description" content="A nagyonbaba workshop csakis a legbabább termékeket tartalmazza.">
+  <meta name="keywords" content="webshop, design, workshop, termékek, nagyonbaba">
+  <meta name="author" content="Team Recoil">
+  <meta name="robots" content="noindex, nofollow">
+  <title>hírlevél!</title>
 </head>
 
 <body>
-    <form action="23.%20óra/sidepages/hirlevel.html" method="post">
-        <h1>hírlevél feliratkozás</h1>
-        <p id="lead">Maradj naprakész a legújabb termékekkel és akciókkal!</p>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">gyors elérés!</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="../index.html">főoldal</a>
+      <a href="workshop.html">workshop</a>
+      <a href="faq.html">gyik</a>
+      <a href="hirlevel.html">hírlevél</a>
+    </div>
+  </div>
+  <form action="feldolgoz.php" method="post" class="center">
+    <h1>iratkozz fel a hírlevelünkre!</h1>
 
-        <div class="container">
-            <label for="name">Név:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
+    <div class="inputbox">
+      <input type="text" id="name" required placeholder="név">
+    </div>
 
-        <div class="container">
-            <label for="email">Email cím:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+    <div class="inputbox">
+      <input type="email" id="email" required placeholder="e-mail">
+    </div>
+<div class="checkbox-group">
+    <div class="checkbox">
+      <input type="checkbox" id="akciok">
+      <label for="akciok">akciók</label>
+    </div>
 
-        <div class="container">
-            <label>
-                <input type="checkbox" checked="checked" name="subscribe"> heti hírlevél
-                <input type="checkbox" name="offers"> különleges ajánlatok
-            </label>
-        </div>
-        </div>
+    <div class="checkbox">
+      <input type="checkbox" id="ujdonsagok">
+      <label for="ujdonsagok">újdonságok</label>
+    </div>
 
-        <div class="container">
-            <input type="submit" value="Feliratkozás">
-        </div>
-    </form>
+    <div class="checkbox">
+      <input type="checkbox" id="hirek">
+      <label for="hirek">hírek</label>
+    </div>
+</div>
+    <div class="inputbox">
+      <input type="button" value="feliratkozás" onclick="showPopup()">
+      
+    </div>
+    <div id="error-message"></div>
+  </form>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>köszönjük a feliratkozást! 🎉</h2>
+      <p>hamarosan küldjük a hírlevelet.</p>
+      <button onclick="closePopup()">bezárás</button>
+    </div>
+  </div>
+  <footer>
+    <p>Vizsgamunka - HTML, CSS, JS (2025 augusztus)</p>
+    <p>Weboldal készítője: Kovács Daniella</p>
+  </footer>
+  <script src="../assets/main.js"></script>
 </body>
 
 </html>
