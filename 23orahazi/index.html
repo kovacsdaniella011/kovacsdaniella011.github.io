@@ -6,16 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nagyonbaba workshop</title>
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
   <meta name="description" content="A nagyonbaba workshop csakis a legbabább termékeket tartalmazza.">
   <meta name="keywords" content="webshop, design, workshop, termékek, nagyonbaba">
   <meta name="author" content="Team Recoil">
+  <meta name="robots" content="noindex, nofollow">
 
 </head>
 
 <body>
   <h1>nagyonbaba workshop</h1>
-  <p id="lead">Fedezd fel a legbabább termékeket!</p>
+  <p class="lead">fedezd fel a legbabább termékeket!</p>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">gyors elérés!</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">főoldal</a>
+      <a href="sidepages/workshop.html">workshop</a>
+      <a href="#contact">gyik</a>
+      <a href="sidepages/hirlevel.html">hírlevél</a>
+    </div>
+  </div>
   <header>
     <h2>✨ WEBSHOP NYITÁS: 2026.01.01. ✨</h2>
     <div id="timer">
@@ -33,44 +44,110 @@
       </div>
       <div class="time">
         <h3 id="masodperc"></h3>
-        <p>másodperc</p>
+        <p>mp</p>
       </div>
     </div>
   </header>
-  <h2>🧁 nagyon baba design</h2>
-  <div class="products">
-    <div class="product">
-      <img src="assets/badtimeicon.png" alt="Here for a bad time, not a long time">
-      <p>badtime.exe</p>
-    </div>
-    <div class="product">
-      <img src="assets/burjanzikicon.png" alt="Burjánzik bennem a téboly">
-      <p>teboly.exe</p>
-    </div>
-    <div class="product">
-      <img src="assets/merreicon.png" alt="Erre?">
-      <p>merre.exe</p>
-    </div>
-    <div class="product">
-      <img src="assets/lobotomyicon.png" alt="Live, Laugh, Lobotomy">
-      <p>lobotomy.exe</p>
-    </div>
-  </div>
+  <main>
+    <section>
+      <h2>🧁 nagyonbaba design</h2>
+      <p class="lead">csekkold a hamarosan érkező termékek dizájnját! találsz róluk póló, mobiltok és egérpad verziókat
+        is.</p>
+      <div class="products">
+        <div class="product" data-title="here for a bad time, not a long time"
+          data-colors='["póló","mobiltok","egérpad"]'
+          data-images='["assets/badtimeshirt.png","assets/badtimecase.png","assets/badtimepad.png"]'>
+          <img src="assets/badtimeicon.png" alt="here for a bad time, not a long time">
+          <h3>badtime.exe</h3>
+          <button class="open-modal">megnézem</button>
+        </div>
 
-  <h2>🍹 kategóriák</h2>
-  <div class="categories">
-    <div class="category">🥼 pólók</div>
-    <div class="category">📱 mobil tokok</div>
-    <div class="category">🖱️ egérpadok</div>
-    <div class="category">🕳️ ???</div>
-  </div>
+        <div class="product" data-title="burjánzik bennem a téboly" data-colors='["póló","mobiltok","egérpad"]'
+          data-images='["assets/burjanzikshirt.png","assets/burjanzikcase.png","assets/burjanzikpad.png"]'>
+          <img src="assets/burjanzikicon.png" alt="burjánzik bennem a téboly">
+          <h3>teboly.exe</h3>
+          <button class="open-modal">megnézem</button>
+        </div>
 
-  <h2>🧸 extra infók</h2>
-  <div class="info-boxes">
-    <div class="info-box">🏆🔪☘️ a workshop-ról</div>
-    <div class="info-box">❓ gyakran ismételt kérdések</div>
-    <div class="info-box">💌 <a href="sidepages/hirlevel.html">hírlevél!</a></div>
-  </div>
+        <div class="product" data-title="erre?" data-colors='["póló","mobiltok","egérpad"]'
+          data-images='["assets/merreshirt.png","assets/merrecase.png","assets/merrepad.png"]'>
+          <img src="assets/merreicon.png" alt="erre?">
+          <h3>merre.exe</h3>
+          <button class="open-modal">megnézem</button>
+        </div>
+
+        <div class="product" data-title="Live, Laugh, Lobotomy" data-colors='["póló","mobiltok","egérpad"]'
+          data-images='["assets/lobotomyshirt.png","assets/lobotomycase.png","assets/lobotomypad.png"]'>
+          <img src="assets/lobotomyicon.png" alt="Live, Laugh, Lobotomy">
+          <h3>lobotomy.exe</h3>
+          <button class="open-modal">megnézem</button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img class="modal-image" src="" alt="">
+          <h3 class="modal-title"></h3>
+
+          <label for="colorSelect">kategória:</label>
+          <select id="colorSelect" class="color-select"></select>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>🍹 kategóriák</h2>
+      <p class="lead">válogass a legbabább cikkek közül! gyűjtsd össze mindet! vagy legalább az egyik dizájnból mindet!
+        vagy csak azt, ami a leginkább tetszik! semmi nyomás.</p>
+      <div class="categories">
+        <div class="category">🥼 pólók
+          <div class="description">kényelmes és stílusos pólók minden alkalomra (is).
+            <li>Anyag: 100% pamut</li>
+            <li>Stílus: Uniszex - o-nyak, v-nyak, tank top, crop top</li>
+            <li>Méret: XS, S, M, L, XL, 2XL</li>
+            <li>Színek: TBD</li>
+            <li>Nénik általi dicséret valószínűsége a buszon: 100%</li>
+          </div>
+        </div>
+
+        <div class="category">📱 mobiltokok
+          <div class="description">védd meg telefonodat egyedi mobiltokjainkkal.
+            <li>Anyag: Műanyag</li>
+            <li>Munkahelyi telefonok: Letudva</li>
+            <li>Fajták: iPhone, Samsung, Xiaomi, Huawei</li>
+            <li>Igen, de azon belül: TBD</li>
+            <li>Ütések: Állja</li>
+          </div>
+        </div>
+        <div class="category">🖱️ egérpadok
+          <div class="description">fedezd fel ergonomikus egérpadjainkat (bármit is jelentsen az).
+            <li>Anyag: Szövet</li>
+            <li>Méret: 220 x 180 x 5 mm</li>
+            <li>Csúszásmentes hátlap: Igen</li>
+            <li>Irodai adekvátság: Talán</li>
+            <li>Gaming: Erősen ajánlott</li>
+          </div>
+        </div>
+        <div class="category">🕳️ mi más?
+          <div class="description">van valami ötleted/kívánságod? bögre? táska? bármi? <a
+              href="sidepages/workshop.html">tudasd velünk</a> és utánajárunk a lehetőségeinknek!</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>🧸 extra infók</h2>
+      <div class="info-boxes">
+        <div class="info-box">🏆🔪☘️ <a href="sidepages/workshop.html">a workshop-ról</a></div>
+        <div class="info-box">❓ <a href="sidepages/faq.html">gyakran ismételt kérdések</a></div>
+        <div class="info-box">💌 <a href="sidepages/hirlevel.html">hírlevél!</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Vizsgamunka - HTML, CSS, JS (2025 augusztus)</p>
+    <p>Weboldal készítője: Kovács Daniella</p>
+  </footer>
   <script src="assets/main.js"></script>
 </body>
 
